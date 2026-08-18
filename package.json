@@ -1,0 +1,11 @@
+{
+  "name": "meta-browser-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Firefox WebExtension for local-only Meta Business Suite Inbox extraction.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node tests/normalize-fingerprint.test.js && node tests/eleanor-api.test.js && node tests/raw-conversation-fixture.test.js && node tests/message-candidates.test.js && node tests/parser-text-regression.test.js"
+  },
+  "devDependencies": {}
+}

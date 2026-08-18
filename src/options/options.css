@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light;
+  font: 15px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f6f8fb;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 640px;
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #d7dce3;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+  color: #526071;
+  font-weight: 650;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd3df;
+  border-radius: 6px;
+  padding: 10px;
+  color: #172033;
+  font: inherit;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  background: #113f67;
+  color: #fff;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+button:disabled {
+  opacity: .65;
+  cursor: default;
+}
+
+#token-status,
+#status,
+.hint {
+  color: #526071;
+}
+
+.hint {
+  font-size: 13px;
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eleanor Browser Bridge Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <h1>Eleanor Browser Bridge Settings</h1>
+      <section>
+        <label>
+          Eleanor Base URL
+          <input id="base-url" type="url" placeholder="https://eleanor-sourcing-os.vercel.app" autocomplete="off">
+        </label>
+        <label>
+          Browser Bridge Token
+          <input id="bridge-token" type="password" placeholder="Not saved" autocomplete="off">
+        </label>
+        <p id="token-status"></p>
+        <div class="actions">
+          <button id="save-settings" type="button">Save</button>
+          <button id="test-connection" type="button">Test Connection</button>
+        </div>
+        <p class="hint">If Eleanor has no health-check endpoint, use a real Facebook or Instagram sync to verify the token.</p>
+        <p id="status" role="status"></p>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

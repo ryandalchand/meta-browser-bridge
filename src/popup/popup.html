@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eleanor Browser Bridge</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>Eleanor Browser Bridge</h1>
+      <dl>
+        <dt>Meta Business Suite</dt>
+        <dd id="meta-status">Checking...</dd>
+        <dt>Current conversation</dt>
+        <dd id="conversation-status">Not inspected</dd>
+        <dt>Bridge status</dt>
+        <dd>Facebook/Instagram sync</dd>
+      </dl>
+      <button id="inspect" type="button">Inspect Current Conversation</button>
+      <section class="settings">
+        <h2>Settings</h2>
+        <label>
+          Eleanor Base URL
+          <input id="base-url" type="url" placeholder="https://eleanor-sourcing-os.vercel.app" autocomplete="off">
+        </label>
+        <label>
+          Browser Bridge Token
+          <input id="bridge-token" type="password" placeholder="Not saved" autocomplete="off">
+        </label>
+        <div id="token-status"></div>
+        <div class="actions">
+          <button id="save-settings" type="button">Save</button>
+          <button id="test-connection" type="button">Test Connection</button>
+        </div>
+      </section>
+      <p id="error" role="status"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

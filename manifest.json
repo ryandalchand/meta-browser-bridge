@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Eleanor Meta Browser Bridge",
+  "version": "0.1.0",
+  "description": "Local-only Meta Business Suite Inbox conversation extractor for Eleanor Sourcing OS.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "https://business.facebook.com/*",
+    "https://eleanor-sourcing-os.vercel.app/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "action": {
+    "default_title": "Eleanor Browser Bridge",
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": [
+      "src/shared/eleanor-api.js",
+      "src/background/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://business.facebook.com/*"],
+      "js": [
+        "src/shared/bootstrap.js",
+        "src/shared/types.js",
+        "src/shared/normalize.js",
+        "src/shared/fingerprint.js",
+        "src/shared/message-candidates.js",
+        "src/content/meta-selectors.js",
+        "src/content/meta-parser.js",
+        "src/content/meta-ui.js",
+        "src/content/meta-inbox.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "meta-browser-bridge@eleanor.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

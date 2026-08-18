@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Eleanor Bridge">
+  <rect width="96" height="96" rx="18" fill="#113f67"/>
+  <path d="M22 52h24v10H22a14 14 0 0 1 0-28h24v10H22a4 4 0 0 0 0 8Z" fill="#f4d35e"/>
+  <path d="M50 34h24a14 14 0 0 1 0 28H50V52h24a4 4 0 0 0 0-8H50V34Z" fill="#ee964b"/>
+  <path d="M34 43h28v10H34z" fill="#fafafa"/>
+</svg>
