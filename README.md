@@ -1,6 +1,6 @@
 # Meta Browser Bridge
 
-Firefox WebExtension for inspecting the currently open Meta Business Suite Inbox conversation and syncing the normalized Facebook/Instagram payload to Eleanor Sourcing OS.
+Firefox WebExtension for inspecting the currently open Meta Business Suite Inbox conversation and syncing the normalized Facebook/Instagram payload to Sourcing OS.
 
 The extension does not log in to Meta, store Meta credentials, read cookies, download media, crawl the inbox, continuously scrape conversations, or send customer replies.
 
@@ -26,18 +26,18 @@ Deferred:
 
 1. Open the extension settings page.
    - From the on-page bridge panel, click `Open Settings`.
-   - Or open `about:addons`, select `Eleanor Meta Browser Bridge`, and open its preferences/options.
-2. Set `Eleanor Base URL`.
+   - Or open `about:addons`, select `Meta Browser Bridge`, and open its preferences/options.
+2. Set `Base URL`.
 3. Set `Browser Bridge Token`.
 4. Click `Save`.
 5. Open Meta Business Suite at `https://business.facebook.com/`.
 6. Open Inbox.
 7. Select a Facebook Messenger or Instagram customer.
-8. Click `Sync to Eleanor`.
+8. Click `Sync to E-OS`.
 9. Continue chatting normally in Meta.
-10. Click `Sync to Eleanor` again when new sourcing information has been collected.
+10. Click `Sync to E-OS` again when new sourcing information has been collected.
 
-Repeated sync is safe. The extension sends the current normalized thread each time; Eleanor performs message deduplication and sourcing analysis.
+Repeated sync is safe. The extension sends the current normalized thread each time;  performs message deduplication and sourcing analysis.
 
 ## What Gets Extracted
 
@@ -54,7 +54,7 @@ The bridge reads only the conversation currently loaded in the visible Meta Busi
 
 If the bridge cannot confidently classify a channel, message direction, or timestamp, it reports `UNKNOWN` or low confidence instead of inventing data.
 
-## Eleanor Sync
+## E-OS Sync
 
 Sync uses:
 
@@ -62,7 +62,7 @@ Sync uses:
 POST /api/browser-bridge/meta/sync
 ```
 
-The content script extracts the current conversation, then sends it to the background script. The background script performs the Eleanor request with:
+The content script extracts the current conversation, then sends it to the background script. The background script performs the request with:
 
 - `Content-Type: application/json`
 - `Authorization: Bearer <Browser Bridge Token>`
@@ -83,7 +83,7 @@ The console output includes:
 - selector diagnostics
 - normalized payload
 
-The extension never logs Meta cookies, session tokens, passwords, or Eleanor API secrets.
+The extension never logs Meta cookies, session tokens, passwords, or API secrets.
 
 ## Tests
 
