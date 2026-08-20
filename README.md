@@ -1,4 +1,4 @@
-# Eleanor Meta Browser Bridge
+# Meta Browser Bridge
 
 Firefox WebExtension for inspecting the currently open Meta Business Suite Inbox conversation and syncing the normalized Facebook/Instagram payload to Eleanor Sourcing OS.
 
